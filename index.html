@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="shortcut icon" href="img/AR-logo.png" />
     <title>Visualizador de Modelos 3D - Robot Expressivo</title>
     <meta charset="utf-8">
     <meta name="description" content="Visualiza un modelo 3D interactivo del Robot Expressivo con controles de cámara y soporte para realidad aumentada.">
@@ -14,23 +15,39 @@
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-        background-color: #f4f4f9;
-        color: #333;
+        color: black;
+
+        background-image: url('img/black.jpeg'); /* Ruta correcta de la imagen */
+        background-size: cover; /* Ajusta la imagen para que cubra todo el área */
+        background-position: center; /* Centra la imagen en el header */
       }
+
       header {
-        background-color: #007bff;
-        color: white;
+        background-image: url('img/dark-font.jpg'); /* Ruta correcta de la imagen */
+        background-size: cover; /* Ajusta la imagen para que cubra todo el área */
+        background-position: center; /* Centra la imagen en el header */
+        color: gray;
         padding: 20px;
         text-align: center;
+        color: white;
+        font-family: monaco,Consolas,Lucida Console,monospace;
       }
+      
+
       header h1 {
         margin: 0;
+        font-size: 45px;
+        font-weight: bolder;
+
       }
       .description {
         text-align: center;
         padding: 20px;
-        background-color: #e9ecef;
+        background-color: gray;
+        color: white;
+        font-size: 20px;
       }
+
       footer {
         margin-top: auto;
         background-color: #343a40;
@@ -38,9 +55,11 @@
         text-align: center;
         padding: 10px 0;
       }
+
       footer p {
         margin: 5px;
       }
+      
       footer a {
         color: white;
         margin: 0 10px;
@@ -86,15 +105,22 @@
     
     <script src="./js/script.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-
+    <br><br><br>
     <footer>
-      <p>&copy; 2024 Derechos Reservados - Zinedine Acosta Hernández y Ana Esbeidy Cervantes</p>
+      <p>&copy; 2024 Derechos Reservados - Zinedine Acosta Hernández; Ana Esbeidy Cervantes</p>
       <div class="social-icons">
         <a href="https://github.com/tu-usuario" target="_blank">
-          <img src="github-icon.png" alt="GitHub">
+          <img src="img/github-icon.png" alt="GitHub">Zinedine Acosta
         </a>
         <a href="https://linkedin.com/in/tu-usuario" target="_blank">
-          <img src="linkedin-icon.png" alt="LinkedIn">
+          <img src="img/linkedin-icon.png" alt="LinkedIn">Zinedine Acosta
+        </a>
+        <br>
+        <a href="https://github.com/tu-usuario" target="_blank">
+          <img src="img/github-icon.png" alt="GitHub">Ana Esbeidy Cervantes
+        </a>
+        <a href="https://linkedin.com/in/tu-usuario" target="_blank">
+          <img src="img/linkedin-icon.png" alt="LinkedIn">Ana Esbeidy Cervantes
         </a>
       </div>
     </footer>
