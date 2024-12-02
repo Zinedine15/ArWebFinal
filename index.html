@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Visualizador de Modelos 3D - Robot Expressivo</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Visualiza un modelo 3D interactivo del Robot Expressivo con controles de cámara y soporte para realidad aumentada.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./css/styles.css" rel="stylesheet"/>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      header {
+        background-color: #007bff;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+      }
+      .description {
+        text-align: center;
+        padding: 20px;
+        background-color: #e9ecef;
+      }
+      footer {
+        margin-top: auto;
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      footer p {
+        margin: 5px;
+      }
+      footer a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      footer .social-icons {
+        margin-top: 10px;
+      }
+      footer .social-icons a {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      footer .social-icons img {
+        width: 24px;
+        height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Visualizador de Modelos 3D - Robot Expressivo</h1>
+    </header>
+    
+    <section class="description">
+      <p>Esta página te permite visualizar e interactuar con un modelo 3D del Robot Expressivo. Utiliza los controles de cámara y explora el modelo en realidad aumentada.</p>
+    </section>
+    
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="models/RobotExpressive.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" autoplay animation-name="Walking">
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+        Ver en cámara
+      </button>
+      <div id="ar-prompt">
+        <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    
+    <script src="./js/script.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <footer>
+      <p>&copy; 2024 Derechos Reservados - Zinedine Acosta Hernández y Ana Esbeidy Cervantes</p>
+      <div class="social-icons">
+        <a href="https://github.com/tu-usuario" target="_blank">
+          <img src="github-icon.png" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/in/tu-usuario" target="_blank">
+          <img src="linkedin-icon.png" alt="LinkedIn">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
